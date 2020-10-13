@@ -52,11 +52,11 @@ export default {
   },
   methods: {
     chooseOne() {
-     var ranleni = Math.floor(Math.random() * (Object.keys(this.parts.eyes).length - 0 + 1) + 0);
+    //  var ranleni = Math.floor(Math.random() * (Object.keys(this.parts.eyes).length - 0 + 1) + 0);
       // return array[ Math.random()*array.length ]
-      this.leni.eye = this.parts.eyes[ranleni]
+      // this.leni.eye = this.parts.eyes[ranleni]
           /* eslint-disable no-console */
-    console.log(this.parts.eyes[0]); 
+    // console.log(this.parts.eyes[0]); 
     /* eslint-enable no-console */
 
 // Object.keys(this.parts.eyes).forEach(function(key) {
