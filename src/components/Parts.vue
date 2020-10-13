@@ -1,11 +1,11 @@
 <template>
     <section class="parts-container">
         <div class="tabs">
-            <div v-for="(tab, i) in tabs" :key="i" @click="tabActive = tab">{{ tab }}</div>
+            <div v-for="(tab, i) in tabs" :key="i" :class="{'active': tabActive === tab}" @click="tabActive = tab">{{ tab }}</div>
         </div>
 
         <ul class="parts" v-if="tabActive == 'eyes'">
-            <li @click="chooseEye(item)" class="eye" v-for="(item, i) in parts.eyes" :key="i"> 
+            <li @click="chooseEye(item)" class="eye" :class="{'active': leni.eye === item}" v-for="(item, i) in parts.eyes" :key="i"> 
                 <svg viewBox="0 0 200 200" v-html="item.url"></svg>
                 <span>{{ item.name }}</span>
             </li>
@@ -40,7 +40,6 @@
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld.vue'
 import store from './../store.js'
 
 export default {
@@ -73,36 +72,18 @@ ul { padding-left: 0; }
 
 .parts-container {
   border: 1px solid;
+  border-top: 0;
   grid-area: parts;
 }
 .tabs { 
-  border: 1px solid;
   cursor: pointer;
   display: flex; 
   justify-content: space-around;
   > div {
     border: 1px solid;
     flex: 1 1 auto;
-  }
-}
-.parts {
-  display:flex;
-  li { 
-    background-color: #f0f0f0;
-    cursor: pointer;
-    flex: 1 1 auto;
-    list-style-type: none;
-    margin: 5px;
-    text-align: center;
-    &:hover {
-      background-color:rebeccapurple;
-    }
-    svg { 
-      margin: 10px;
-    }
-    span {
-      border: 1px solid;
-      display: block;
+    &.active, &:hover, &:focus {
+        background-color: #354156;
     }
   }
 }

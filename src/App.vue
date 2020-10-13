@@ -1,10 +1,11 @@
 <template>
   <div id="app">
+    <!-- <header class="logo">Leni-o-matic</header> -->
     <nav class="main-nav">
       <ul>
         <!-- <li>Import</li> -->
         <li>Export</li>
-        <li @click="randomize()">Random</li>
+        <li @click="chooseOne()">Random</li>
       </ul>
     </nav>
       <main class="leni-container">
@@ -28,21 +29,15 @@
           <g v-html="leni.eye.url"></g>
           <g v-html="leni.mouth.url"></g>
           <g v-html="leni.hat.url"></g>
-          <g v-html="leni.hand.url"></g>
           <g v-html="leni.extra.url"></g>
+          <g v-html="leni.hand.url"></g>
 
         </svg>
-
-        <div class="face-wrapper">
-
-        </div>
-
 
       </main>
 
     <Parts />
 
-    <footer>Created by <a target="_blank" href="https://leniolabs.com/">Leniolabs_</a></footer>
   </div>
 </template>
 
@@ -53,16 +48,26 @@ import store from './store.js'
 export default {
   name: 'app',
   data: function () {
-  return store.data
+    return store.data
   },
   methods: {
-    randomize() {
-      var randomArr = []; 
-      randomArr = this.parts.eyes;
-     // var randomleni = this.parts.eyes[Math.floor(Math.random() * this.parts.eyes.length)];
-/* eslint-disable no-console */
-console.log(randomArr);
-/* eslint-enable no-console */    }
+    chooseOne() {
+     var ranleni = Math.floor(Math.random() * (Object.keys(this.parts.eyes).length - 0 + 1) + 0);
+      // return array[ Math.random()*array.length ]
+      this.leni.eye = this.parts.eyes[ranleni]
+          /* eslint-disable no-console */
+    console.log(this.parts.eyes[0]); 
+    /* eslint-enable no-console */
+
+// Object.keys(this.parts.eyes).forEach(function(key) {
+//     /* eslint-disable no-console */
+//     console.log(key, this.parts.eyes[key]);
+//     /* eslint-enable no-console */
+// });
+
+
+    }
+
   },
   components: {
     Parts
@@ -84,8 +89,8 @@ ul { padding-left: 0; }
   -moz-osx-font-smoothing: grayscale;
     display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.5fr 40vh 4fr 0.5fr;
-  grid-template-areas: "nav" "leni" "parts" "footer";
+  grid-template-rows: .5fr .5fr 40vh 4fr 0.5fr;
+  grid-template-areas: "logo" "nav" "leni" "parts" "footer";
   height: 100vh;
   margin: 0 auto;
   max-width: 800px;
@@ -105,46 +110,37 @@ ul { padding-left: 0; }
   }
 }
 
-.leni-container {
-  border: 1px solid;
-  grid-area: leni;  
-  padding: 20px;
-  position: relative;
-}
-.face-wrapper {
-  position: absolute;
-  top: 20px;
-}
-.leni-head {
-  height: 100%;
-  position: relative;
+.logo {
+  grid-area: logo;  
 }
 
-.parts-container {
+.leni-container {
   border: 1px solid;
-  grid-area: parts;
+  border-bottom: 0;
+  grid-area: leni;  
 }
-.tabs { 
-  border: 1px solid;
-  cursor: pointer;
-  display: flex; 
-  justify-content: space-around;
-  > div {
-    border: 1px solid;
-    flex: 1 1 auto;
+
+.leni-head {
+  height: 100%;
+  .none {
+    display: none;
   }
 }
+
 .parts {
   display:flex;
+  flex-wrap: wrap;
   li { 
-    background-color: #f0f0f0;
+    background-color: #354156;
+    border: 1px solid transparent;
     cursor: pointer;
-    flex: 1 1 auto;
+    flex: 1 1 100px;
     list-style-type: none;
     margin: 5px;
     text-align: center;
-    &:hover {
-      background-color:rebeccapurple;
+    &:hover, &:focus, &.active {
+      background-color: #233042;
+      border-color: initial;
     }
     svg { 
       margin: 10px;
@@ -155,7 +151,5 @@ ul { padding-left: 0; }
     }
   }
 }
-
-footer { grid-area: footer; text-align: right; }
 
 </style>
