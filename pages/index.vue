@@ -81,7 +81,6 @@ export default {
         extra2: "",
       },
       parts: this.$parts,
-      loadingSwipe: true,
     };
   },
   mounted() {
@@ -108,12 +107,16 @@ export default {
       return parts[keys[random]];
     },
     chooseOne() {
-      this.leni.eye = this.randomElement(this.parts.eye);
-      this.leni.mouth = this.randomElement(this.parts.mouth);
-      this.leni.extra = this.randomElement(this.parts.extra);
-      this.leni.hat = this.randomElement(this.parts.hat);
-      this.leni.hand = this.randomElement(this.parts.hand);
-      this.leni.extra2 = this.randomElement(this.parts.extra2);
+      var randomnumber = Math.floor(Math.random() * (Object.keys(this.leni).length - 2 + 1)) + 2;
+      const types = Object.keys(this.leni).slice(0,randomnumber)
+      const pepes = Object.keys(this.leni)
+      for (let e = 0; e < pepes.length; e++) {
+        this.leni[pepes[e]] = ''
+      }       
+      for (let i = 0; i < types.length; i++) {
+        this.leni[types[i]] = this.randomElement(this.parts[types[i]]);
+      } 
+
       this.checkRoute()
     },    
     checkRoute() {
