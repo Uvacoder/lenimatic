@@ -1,0 +1,305 @@
+{
+  "Znone": {
+    "description": "Auto imported from components/znone.vue"
+  },
+  "ExtraBeard": {
+    "description": "Auto imported from components/extra/beard.vue"
+  },
+  "ExtraBlush": {
+    "description": "Auto imported from components/extra/blush.vue"
+  },
+  "ExtraBowie": {
+    "description": "Auto imported from components/extra/bowie.vue"
+  },
+  "ExtraDoctor": {
+    "description": "Auto imported from components/extra/doctor.vue"
+  },
+  "ExtraGlasses": {
+    "description": "Auto imported from components/extra/glasses.vue"
+  },
+  "ExtraHeadmic": {
+    "description": "Auto imported from components/extra/headmic.vue"
+  },
+  "ExtraLapiz": {
+    "description": "Auto imported from components/extra/lapiz.vue"
+  },
+  "ExtraSunglasses": {
+    "description": "Auto imported from components/extra/sunglasses.vue"
+  },
+  "Extra2Bigsweat": {
+    "description": "Auto imported from components/extra2/bigsweat.vue"
+  },
+  "Extra2Confetti": {
+    "description": "Auto imported from components/extra2/confetti.vue"
+  },
+  "Extra2Cry": {
+    "description": "Auto imported from components/extra2/cry.vue"
+  },
+  "Extra2Moustache": {
+    "description": "Auto imported from components/extra2/moustache.vue"
+  },
+  "Extra2Sleep": {
+    "description": "Auto imported from components/extra2/sleep.vue"
+  },
+  "Extra2Sweat": {
+    "description": "Auto imported from components/extra2/sweat.vue"
+  },
+  "EyeBad": {
+    "description": "Auto imported from components/eye/bad.vue"
+  },
+  "EyeBroken": {
+    "description": "Auto imported from components/eye/broken.vue"
+  },
+  "EyeConfused": {
+    "description": "Auto imported from components/eye/confused.vue"
+  },
+  "EyeHappy": {
+    "description": "Auto imported from components/eye/happy.vue"
+  },
+  "EyeHeart": {
+    "description": "Auto imported from components/eye/heart.vue"
+  },
+  "EyeLaugh": {
+    "description": "Auto imported from components/eye/laugh.vue"
+  },
+  "EyeLeft": {
+    "description": "Auto imported from components/eye/left.vue"
+  },
+  "EyeOpen": {
+    "description": "Auto imported from components/eye/open.vue"
+  },
+  "EyeParche": {
+    "description": "Auto imported from components/eye/parche.vue"
+  },
+  "EyeRight": {
+    "description": "Auto imported from components/eye/right.vue"
+  },
+  "EyeRoll": {
+    "description": "Auto imported from components/eye/roll.vue"
+  },
+  "EyeSad": {
+    "description": "Auto imported from components/eye/sad.vue"
+  },
+  "EyeSad2": {
+    "description": "Auto imported from components/eye/sad2.vue"
+  },
+  "EyeSick": {
+    "description": "Auto imported from components/eye/sick.vue"
+  },
+  "EyeSmile": {
+    "description": "Auto imported from components/eye/smile.vue"
+  },
+  "EyeSmile2": {
+    "description": "Auto imported from components/eye/smile2.vue"
+  },
+  "EyeSmirk": {
+    "description": "Auto imported from components/eye/smirk.vue"
+  },
+  "EyeTired": {
+    "description": "Auto imported from components/eye/tired.vue"
+  },
+  "EyeTired2": {
+    "description": "Auto imported from components/eye/tired2.vue"
+  },
+  "EyeUp": {
+    "description": "Auto imported from components/eye/up.vue"
+  },
+  "HandAr": {
+    "description": "Auto imported from components/hand/ar.vue"
+  },
+  "HandBadge": {
+    "description": "Auto imported from components/hand/badge.vue"
+  },
+  "HandBeer": {
+    "description": "Auto imported from components/hand/beer.vue"
+  },
+  "HandCake": {
+    "description": "Auto imported from components/hand/cake.vue"
+  },
+  "HandCalc": {
+    "description": "Auto imported from components/hand/calc.vue"
+  },
+  "HandChef": {
+    "description": "Auto imported from components/hand/chef.vue"
+  },
+  "HandCl": {
+    "description": "Auto imported from components/hand/cl.vue"
+  },
+  "HandCreditcard": {
+    "description": "Auto imported from components/hand/creditcard.vue"
+  },
+  "HandCv": {
+    "description": "Auto imported from components/hand/cv.vue"
+  },
+  "HandDisk": {
+    "description": "Auto imported from components/hand/disk.vue"
+  },
+  "HandEs": {
+    "description": "Auto imported from components/hand/es.vue"
+  },
+  "HandFace": {
+    "description": "Auto imported from components/hand/face.vue"
+  },
+  "HandFernet": {
+    "description": "Auto imported from components/hand/fernet.vue"
+  },
+  "HandFutbol": {
+    "description": "Auto imported from components/hand/futbol.vue"
+  },
+  "HandHu": {
+    "description": "Auto imported from components/hand/hu.vue"
+  },
+  "HandIt": {
+    "description": "Auto imported from components/hand/it.vue"
+  },
+  "HandKeys": {
+    "description": "Auto imported from components/hand/keys.vue"
+  },
+  "HandLgbt": {
+    "description": "Auto imported from components/hand/lgbt.vue"
+  },
+  "HandLoan": {
+    "description": "Auto imported from components/hand/loan.vue"
+  },
+  "HandLupa": {
+    "description": "Auto imported from components/hand/lupa.vue"
+  },
+  "HandMate": {
+    "description": "Auto imported from components/hand/mate.vue"
+  },
+  "HandMouth": {
+    "description": "Auto imported from components/hand/mouth.vue"
+  },
+  "HandPatin": {
+    "description": "Auto imported from components/hand/patin.vue"
+  },
+  "HandPeluche": {
+    "description": "Auto imported from components/hand/peluche.vue"
+  },
+  "HandPlant": {
+    "description": "Auto imported from components/hand/plant.vue"
+  },
+  "HandRaise": {
+    "description": "Auto imported from components/hand/raise.vue"
+  },
+  "HandSee": {
+    "description": "Auto imported from components/hand/see.vue"
+  },
+  "HandSide": {
+    "description": "Auto imported from components/hand/side.vue"
+  },
+  "HandTea": {
+    "description": "Auto imported from components/hand/tea.vue"
+  },
+  "HandTenis": {
+    "description": "Auto imported from components/hand/tenis.vue"
+  },
+  "HandThink": {
+    "description": "Auto imported from components/hand/think.vue"
+  },
+  "HandUs": {
+    "description": "Auto imported from components/hand/us.vue"
+  },
+  "HandVe": {
+    "description": "Auto imported from components/hand/ve.vue"
+  },
+  "HatAuris": {
+    "description": "Auto imported from components/hat/auris.vue"
+  },
+  "HatAurisfluo": {
+    "description": "Auto imported from components/hat/aurisfluo.vue"
+  },
+  "HatBirthday": {
+    "description": "Auto imported from components/hat/birthday.vue"
+  },
+  "HatChef": {
+    "description": "Auto imported from components/hat/chef.vue"
+  },
+  "HatCommvault": {
+    "description": "Auto imported from components/hat/commvault.vue"
+  },
+  "HatCop": {
+    "description": "Auto imported from components/hat/cop.vue"
+  },
+  "HatDiego": {
+    "description": "Auto imported from components/hat/diego.vue"
+  },
+  "HatDoc": {
+    "description": "Auto imported from components/hat/doc.vue"
+  },
+  "HatElliemae": {
+    "description": "Auto imported from components/hat/elliemae.vue"
+  },
+  "HatNieve": {
+    "description": "Auto imported from components/hat/nieve.vue"
+  },
+  "HatNoel": {
+    "description": "Auto imported from components/hat/noel.vue"
+  },
+  "HatPaypal": {
+    "description": "Auto imported from components/hat/paypal.vue"
+  },
+  "HatSap": {
+    "description": "Auto imported from components/hat/sap.vue"
+  },
+  "HatSleep": {
+    "description": "Auto imported from components/hat/sleep.vue"
+  },
+  "HatTigre": {
+    "description": "Auto imported from components/hat/tigre.vue"
+  },
+  "HatTrinet": {
+    "description": "Auto imported from components/hat/trinet.vue"
+  },
+  "HatUnited": {
+    "description": "Auto imported from components/hat/united.vue"
+  },
+  "HatVisera": {
+    "description": "Auto imported from components/hat/visera.vue"
+  },
+  "HeadBase": {
+    "description": "Auto imported from components/head/base.vue"
+  },
+  "MouthBarbijo": {
+    "description": "Auto imported from components/mouth/barbijo.vue"
+  },
+  "MouthGrim": {
+    "description": "Auto imported from components/mouth/grim.vue"
+  },
+  "MouthHappy": {
+    "description": "Auto imported from components/mouth/happy.vue"
+  },
+  "MouthHorror": {
+    "description": "Auto imported from components/mouth/horror.vue"
+  },
+  "MouthIll": {
+    "description": "Auto imported from components/mouth/ill.vue"
+  },
+  "MouthOh": {
+    "description": "Auto imported from components/mouth/oh.vue"
+  },
+  "MouthPanic": {
+    "description": "Auto imported from components/mouth/panic.vue"
+  },
+  "MouthSad": {
+    "description": "Auto imported from components/mouth/sad.vue"
+  },
+  "MouthSad2": {
+    "description": "Auto imported from components/mouth/sad2.vue"
+  },
+  "MouthSide": {
+    "description": "Auto imported from components/mouth/side.vue"
+  },
+  "MouthSmile": {
+    "description": "Auto imported from components/mouth/smile.vue"
+  },
+  "MouthTeeth": {
+    "description": "Auto imported from components/mouth/teeth.vue"
+  },
+  "MouthTongue": {
+    "description": "Auto imported from components/mouth/tongue.vue"
+  },
+  "MouthYum": {
+    "description": "Auto imported from components/mouth/yum.vue"
+  }
+}
