@@ -363,6 +363,8 @@ button {
   display: flex;
   margin: 0;
   flex-direction: column;
+background-image: linear-gradient(transparent 90%, rgba(26, 84, 105, 0.25));
+    background-size: 1px 11px;  
   button {
     background: transparent;
     border: 0;
@@ -415,7 +417,7 @@ button {
   > button {
     padding: 10px 20px;
     margin: 0 5px;
-    background: transparent;
+    background: #1d5469;
     border: 1px solid rgba(26, 84, 105, 0.9);
     border-radius: 50px;
     flex: 1;
@@ -437,7 +439,7 @@ button {
   display: none;
   max-height: calc(100vh - 160px);
   overflow: auto;
-  padding: 15px 0;
+  padding: 20px 0;
   &.active {
     display: block;
   }
@@ -460,6 +462,11 @@ button {
   svg {
     width: 100%;
   }
+}
+
+.partes {
+  background-image: linear-gradient(transparent 90%, rgba(26, 84, 105, 0.25));
+    background-size: 1px 11px;
 }
 
 .scene {
