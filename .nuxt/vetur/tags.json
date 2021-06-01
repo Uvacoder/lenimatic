@@ -1,22 +1,4 @@
 {
-  "Extra2Bigsweat": {
-    "description": "Auto imported from components/extra2/bigsweat.vue"
-  },
-  "Extra2Confetti": {
-    "description": "Auto imported from components/extra2/confetti.vue"
-  },
-  "Extra2Cry": {
-    "description": "Auto imported from components/extra2/cry.vue"
-  },
-  "Extra2Moustache": {
-    "description": "Auto imported from components/extra2/moustache.vue"
-  },
-  "Extra2Sleep": {
-    "description": "Auto imported from components/extra2/sleep.vue"
-  },
-  "Extra2Sweat": {
-    "description": "Auto imported from components/extra2/sweat.vue"
-  },
   "ExtraBeard": {
     "description": "Auto imported from components/extra/beard.vue"
   },
@@ -101,8 +83,80 @@
   "EyeUp": {
     "description": "Auto imported from components/eye/up.vue"
   },
-  "HeadBase": {
-    "description": "Auto imported from components/head/base.vue"
+  "Extra2Bigsweat": {
+    "description": "Auto imported from components/extra2/bigsweat.vue"
+  },
+  "Extra2Confetti": {
+    "description": "Auto imported from components/extra2/confetti.vue"
+  },
+  "Extra2Cry": {
+    "description": "Auto imported from components/extra2/cry.vue"
+  },
+  "Extra2Moustache": {
+    "description": "Auto imported from components/extra2/moustache.vue"
+  },
+  "Extra2Sleep": {
+    "description": "Auto imported from components/extra2/sleep.vue"
+  },
+  "Extra2Sweat": {
+    "description": "Auto imported from components/extra2/sweat.vue"
+  },
+  "HatAuris": {
+    "description": "Auto imported from components/hat/auris.vue"
+  },
+  "HatAurisfluo": {
+    "description": "Auto imported from components/hat/aurisfluo.vue"
+  },
+  "HatBirthday": {
+    "description": "Auto imported from components/hat/birthday.vue"
+  },
+  "HatChef": {
+    "description": "Auto imported from components/hat/chef.vue"
+  },
+  "HatCommvault": {
+    "description": "Auto imported from components/hat/commvault.vue"
+  },
+  "HatCop": {
+    "description": "Auto imported from components/hat/cop.vue"
+  },
+  "HatDiego": {
+    "description": "Auto imported from components/hat/diego.vue"
+  },
+  "HatDoc": {
+    "description": "Auto imported from components/hat/doc.vue"
+  },
+  "HatElliemae": {
+    "description": "Auto imported from components/hat/elliemae.vue"
+  },
+  "HatNieve": {
+    "description": "Auto imported from components/hat/nieve.vue"
+  },
+  "HatNoel": {
+    "description": "Auto imported from components/hat/noel.vue"
+  },
+  "HatPaypal": {
+    "description": "Auto imported from components/hat/paypal.vue"
+  },
+  "HatSap": {
+    "description": "Auto imported from components/hat/sap.vue"
+  },
+  "HatSleep": {
+    "description": "Auto imported from components/hat/sleep.vue"
+  },
+  "HatSmoking": {
+    "description": "Auto imported from components/hat/smoking.vue"
+  },
+  "HatTigre": {
+    "description": "Auto imported from components/hat/tigre.vue"
+  },
+  "HatTrinet": {
+    "description": "Auto imported from components/hat/trinet.vue"
+  },
+  "HatUnited": {
+    "description": "Auto imported from components/hat/united.vue"
+  },
+  "HatVisera": {
+    "description": "Auto imported from components/hat/visera.vue"
   },
   "HandBadge": {
     "description": "Auto imported from components/hand/badge.vue"
@@ -215,62 +269,8 @@
   "HandThink": {
     "description": "Auto imported from components/hand/think.vue"
   },
-  "HatAuris": {
-    "description": "Auto imported from components/hat/auris.vue"
-  },
-  "HatAurisfluo": {
-    "description": "Auto imported from components/hat/aurisfluo.vue"
-  },
-  "HatBirthday": {
-    "description": "Auto imported from components/hat/birthday.vue"
-  },
-  "HatChef": {
-    "description": "Auto imported from components/hat/chef.vue"
-  },
-  "HatCommvault": {
-    "description": "Auto imported from components/hat/commvault.vue"
-  },
-  "HatCop": {
-    "description": "Auto imported from components/hat/cop.vue"
-  },
-  "HatDiego": {
-    "description": "Auto imported from components/hat/diego.vue"
-  },
-  "HatDoc": {
-    "description": "Auto imported from components/hat/doc.vue"
-  },
-  "HatElliemae": {
-    "description": "Auto imported from components/hat/elliemae.vue"
-  },
-  "HatNieve": {
-    "description": "Auto imported from components/hat/nieve.vue"
-  },
-  "HatNoel": {
-    "description": "Auto imported from components/hat/noel.vue"
-  },
-  "HatPaypal": {
-    "description": "Auto imported from components/hat/paypal.vue"
-  },
-  "HatSap": {
-    "description": "Auto imported from components/hat/sap.vue"
-  },
-  "HatSleep": {
-    "description": "Auto imported from components/hat/sleep.vue"
-  },
-  "HatSmoking": {
-    "description": "Auto imported from components/hat/smoking.vue"
-  },
-  "HatTigre": {
-    "description": "Auto imported from components/hat/tigre.vue"
-  },
-  "HatTrinet": {
-    "description": "Auto imported from components/hat/trinet.vue"
-  },
-  "HatUnited": {
-    "description": "Auto imported from components/hat/united.vue"
-  },
-  "HatVisera": {
-    "description": "Auto imported from components/hat/visera.vue"
+  "HeadBase": {
+    "description": "Auto imported from components/head/base.vue"
   },
   "MouthBarbijo": {
     "description": "Auto imported from components/mouth/barbijo.vue"

@@ -81,18 +81,21 @@ export default {
         hat: '', hand: '', extra: '', extra2: ''
       }
 
-      if (route.query.e) {
-        leni.eye = route.query.e
-        leni.mouth = route.query.m
-        leni.hat = route.query.ht
-        leni.hand = route.query.hd
-        leni.extra = route.query.x
-        leni.extra2 = route.query.xx
-      }
+
       var tabActive = "eye"
       var parts = app.$parts
       return { tabActive, parts, leni };
 
+  },
+  mounted() {
+    if (this.$route.query.e) {
+        this.leni.eye = this.$route.query.e
+        this.leni.mouth = this.$route.query.m
+        this.leni.hat = this.$route.query.ht
+        this.leni.hand = this.$route.query.hd
+        this.leni.extra = this.$route.query.x
+        this.leni.extra2 = this.$route.query.xx
+      }
   },
   methods: {   
     setPart(parent, item) {
