@@ -41,66 +41,6 @@
   "Extra2Sweat": {
     "description": "Auto imported from components/extra2/sweat.vue"
   },
-  "EyeBad": {
-    "description": "Auto imported from components/eye/bad.vue"
-  },
-  "EyeBroken": {
-    "description": "Auto imported from components/eye/broken.vue"
-  },
-  "EyeConfused": {
-    "description": "Auto imported from components/eye/confused.vue"
-  },
-  "EyeHappy": {
-    "description": "Auto imported from components/eye/happy.vue"
-  },
-  "EyeHeart": {
-    "description": "Auto imported from components/eye/heart.vue"
-  },
-  "EyeLaugh": {
-    "description": "Auto imported from components/eye/laugh.vue"
-  },
-  "EyeLeft": {
-    "description": "Auto imported from components/eye/left.vue"
-  },
-  "EyeOpen": {
-    "description": "Auto imported from components/eye/open.vue"
-  },
-  "EyeParche": {
-    "description": "Auto imported from components/eye/parche.vue"
-  },
-  "EyeRight": {
-    "description": "Auto imported from components/eye/right.vue"
-  },
-  "EyeRoll": {
-    "description": "Auto imported from components/eye/roll.vue"
-  },
-  "EyeSad": {
-    "description": "Auto imported from components/eye/sad.vue"
-  },
-  "EyeSad2": {
-    "description": "Auto imported from components/eye/sad2.vue"
-  },
-  "EyeSick": {
-    "description": "Auto imported from components/eye/sick.vue"
-  },
-  "EyeSmile": {
-    "description": "Auto imported from components/eye/smile.vue"
-  },
-  "EyeSmile2": {
-    "description": "Auto imported from components/eye/smile2.vue"
-  },
-  "EyeSmirk": {
-    "description": "Auto imported from components/eye/smirk.vue"
-  },
-  "EyeTired": {
-    "description": "Auto imported from components/eye/tired.vue"
-  },
-  "EyeTired2": {
-    "description": "Auto imported from components/eye/tired2.vue"
-  },
-  "EyeUp": {
-    "description": "Auto imported from components/eye/up.vue"
-  },
   "HandBadge": {
     "description": "Auto imported from components/hand/badge.vue"
   },
@@ -212,6 +152,9 @@
   "HandThink": {
     "description": "Auto imported from components/hand/think.vue"
   },
+  "HeadBase": {
+    "description": "Auto imported from components/head/base.vue"
+  },
   "HatAuris": {
     "description": "Auto imported from components/hat/auris.vue"
   },
@@ -269,8 +212,65 @@
   "HatVisera": {
     "description": "Auto imported from components/hat/visera.vue"
   },
-  "HeadBase": {
-    "description": "Auto imported from components/head/base.vue"
+  "EyeBad": {
+    "description": "Auto imported from components/eye/bad.vue"
+  },
+  "EyeBroken": {
+    "description": "Auto imported from components/eye/broken.vue"
+  },
+  "EyeConfused": {
+    "description": "Auto imported from components/eye/confused.vue"
+  },
+  "EyeHappy": {
+    "description": "Auto imported from components/eye/happy.vue"
+  },
+  "EyeHeart": {
+    "description": "Auto imported from components/eye/heart.vue"
+  },
+  "EyeLaugh": {
+    "description": "Auto imported from components/eye/laugh.vue"
+  },
+  "EyeLeft": {
+    "description": "Auto imported from components/eye/left.vue"
+  },
+  "EyeOpen": {
+    "description": "Auto imported from components/eye/open.vue"
+  },
+  "EyeParche": {
+    "description": "Auto imported from components/eye/parche.vue"
+  },
+  "EyeRight": {
+    "description": "Auto imported from components/eye/right.vue"
+  },
+  "EyeRoll": {
+    "description": "Auto imported from components/eye/roll.vue"
+  },
+  "EyeSad": {
+    "description": "Auto imported from components/eye/sad.vue"
+  },
+  "EyeSad2": {
+    "description": "Auto imported from components/eye/sad2.vue"
+  },
+  "EyeSick": {
+    "description": "Auto imported from components/eye/sick.vue"
+  },
+  "EyeSmile": {
+    "description": "Auto imported from components/eye/smile.vue"
+  },
+  "EyeSmile2": {
+    "description": "Auto imported from components/eye/smile2.vue"
+  },
+  "EyeSmirk": {
+    "description": "Auto imported from components/eye/smirk.vue"
+  },
+  "EyeTired": {
+    "description": "Auto imported from components/eye/tired.vue"
+  },
+  "EyeTired2": {
+    "description": "Auto imported from components/eye/tired2.vue"
+  },
+  "EyeUp": {
+    "description": "Auto imported from components/eye/up.vue"
   },
   "MouthBarbijo": {
     "description": "Auto imported from components/mouth/barbijo.vue"

@@ -49,7 +49,7 @@
 <div class="flip-container" :class="{active: flipped}">
 	<div class="flipper">
 		<div class="front">
-			      <svg class="leni-head" viewBox="0 0 200 200" role="img" aria-labelledby="leni desc" tabindex="1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<svg class="leni-head" ref="frontleni" viewBox="0 0 200 200" role="img" aria-labelledby="leni desc" tabindex="1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <title id="leni">Leni</title>
         <desc id="desc">Choose parts to build your leni</desc>
        <g id="head">
@@ -72,7 +72,7 @@
       </svg>
 		</div>
 		<div class="back">
-			      <svg class="leni-head" viewBox="0 0 200 200" role="img" aria-labelledby="leni desc" tabindex="1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<svg class="leni-head" ref="backleni" viewBox="0 0 200 200" role="img" aria-labelledby="leni desc" tabindex="1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <title id="leni">Leni</title>
         <desc id="desc">Choose parts to build your leni</desc>
        <g id="head">
@@ -151,17 +151,9 @@ export default {
   methods: {
     setPart(parent, item) {
       if (this.flipped) {
-        if (this.leni[parent] === item) {
-          this.backleni[parent] = "";
-        } else {
-          this.backleni[parent] = item;
-        }
+        if (this.backleni[parent] === item) { this.backleni[parent] = ""; } else { this.backleni[parent] = item; }
       } else {
-        if (this.backleni[parent] === item) {
-          this.leni[parent] = "";
-        } else {
-          this.leni[parent] = item;
-        }
+        if (this.leni[parent] === item) { this.leni[parent] = ""; } else { this.leni[parent] = item; }
       }
       this.checkRoute();
     },
@@ -171,21 +163,20 @@ export default {
       return parts[keys[random]];
     },
     chooseOne() {
-      var randomnumber =
-        Math.floor(Math.random() * (Object.keys(this.leni).length - 2 + 1)) + 2;
+      var randomnumber = Math.floor(Math.random() * (Object.keys(this.leni).length - 2 + 1)) + 2;
       const types = Object.keys(this.leni).slice(0, randomnumber);
-      const pepes = Object.keys(this.leni);
+      const reparts = Object.keys(this.leni);
 
       if (this.flipped) {
-        for (let e = 0; e < pepes.length; e++) {
-          this.leni[pepes[e]] = "";
+        for (let e = 0; e < reparts.length; e++) {
+          this.leni[reparts[e]] = "";
         }
         for (let i = 0; i < types.length; i++) {
           this.leni[types[i]] = this.randomElement(this.parts[types[i]]);
         }
       } else {
-        for (let e = 0; e < pepes.length; e++) {
-          this.backleni[pepes[e]] = "";
+        for (let e = 0; e < reparts.length; e++) {
+          this.backleni[reparts[e]] = "";
         }
         for (let i = 0; i < types.length; i++) {
           this.backleni[types[i]] = this.randomElement(this.parts[types[i]]);
@@ -199,24 +190,23 @@ export default {
     checkRoute() {
       var str = "";
       var repartes = {};
-      if (this.leni.eye !== "") {
-        repartes.e = this.leni.eye;
+      if (this.flipped) {
+        if (this.backleni.eye !== "") { repartes.e = this.backleni.eye; }
+        if (this.backleni.mouth !== "") { repartes.m = this.backleni.mouth; }
+        if (this.backleni.extra !== "") { repartes.x = this.backleni.extra; }
+        if (this.backleni.hand !== "") { repartes.hd = this.backleni.hand; }
+        if (this.backleni.hat !== "") { repartes.ht = this.backleni.hat; }
+        if (this.backleni.extra2 !== "") { repartes.xx = this.backleni.extra2; }
+      } else {
+        if (this.leni.eye !== "") { repartes.e = this.leni.eye; }
+        if (this.leni.mouth !== "") { repartes.m = this.leni.mouth; }
+        if (this.leni.extra !== "") { repartes.x = this.leni.extra; }
+        if (this.leni.hand !== "") { repartes.hd = this.leni.hand; }
+        if (this.leni.hat !== "") { repartes.ht = this.leni.hat; }
+        if (this.leni.extra2 !== "") { repartes.xx = this.leni.extra2; }
       }
-      if (this.leni.mouth !== "") {
-        repartes.m = this.leni.mouth;
-      }
-      if (this.leni.extra !== "") {
-        repartes.x = this.leni.extra;
-      }
-      if (this.leni.hand !== "") {
-        repartes.hd = this.leni.hand;
-      }
-      if (this.leni.hat !== "") {
-        repartes.ht = this.leni.hat;
-      }
-      if (this.leni.extra2 !== "") {
-        repartes.xx = this.leni.extra2;
-      }
+
+
       for (var key in repartes) {
         if (str != "") {
           str += "&";
@@ -227,16 +217,19 @@ export default {
     },
     leniURL() {
       const DOMURL = self.URL || self.webkitURL || self;
-      const svgString = new XMLSerializer()
-        .serializeToString(document.querySelector("svg.leni-head"))
-        .replace(
-          'viewBox="0 0 200 200"',
-          'viewBox="0 0 200 200" width="1000px" height="1000px"'
-        );
+      var svgString;
+      if (this.flipped) {
+       svgString = new XMLSerializer().serializeToString(this.$refs.backleni)
+
+      } else {
+         svgString = new XMLSerializer().serializeToString(this.$refs.frontleni)
+      }
+        
+        svgString.replace('viewBox="0 0 200 200"','viewBox="0 0 200 200" width="1000px" height="1000px"');
       const svg = new Blob([svgString], {
         type: "image/svg+xml;charset=utf-8",
       });
-      return DOMURL.createObjectURL(svg);
+      return DOMURL.createObjectURL(svg); 
     },
     exportLeniSVG() {
       const link = document.createElement("a");

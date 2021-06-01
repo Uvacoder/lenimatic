@@ -14,26 +14,6 @@ export { default as Extra2Cry } from '../../components/extra2/cry.vue'
 export { default as Extra2Moustache } from '../../components/extra2/moustache.vue'
 export { default as Extra2Sleep } from '../../components/extra2/sleep.vue'
 export { default as Extra2Sweat } from '../../components/extra2/sweat.vue'
-export { default as EyeBad } from '../../components/eye/bad.vue'
-export { default as EyeBroken } from '../../components/eye/broken.vue'
-export { default as EyeConfused } from '../../components/eye/confused.vue'
-export { default as EyeHappy } from '../../components/eye/happy.vue'
-export { default as EyeHeart } from '../../components/eye/heart.vue'
-export { default as EyeLaugh } from '../../components/eye/laugh.vue'
-export { default as EyeLeft } from '../../components/eye/left.vue'
-export { default as EyeOpen } from '../../components/eye/open.vue'
-export { default as EyeParche } from '../../components/eye/parche.vue'
-export { default as EyeRight } from '../../components/eye/right.vue'
-export { default as EyeRoll } from '../../components/eye/roll.vue'
-export { default as EyeSad } from '../../components/eye/sad.vue'
-export { default as EyeSad2 } from '../../components/eye/sad2.vue'
-export { default as EyeSick } from '../../components/eye/sick.vue'
-export { default as EyeSmile } from '../../components/eye/smile.vue'
-export { default as EyeSmile2 } from '../../components/eye/smile2.vue'
-export { default as EyeSmirk } from '../../components/eye/smirk.vue'
-export { default as EyeTired } from '../../components/eye/tired.vue'
-export { default as EyeTired2 } from '../../components/eye/tired2.vue'
-export { default as EyeUp } from '../../components/eye/up.vue'
 export { default as HandBadge } from '../../components/hand/badge.vue'
 export { default as HandBeer } from '../../components/hand/beer.vue'
 export { default as HandCake } from '../../components/hand/cake.vue'
@@ -71,6 +51,7 @@ export { default as HandTea } from '../../components/hand/tea.vue'
 export { default as HandTeacup } from '../../components/hand/teacup.vue'
 export { default as HandTenis } from '../../components/hand/tenis.vue'
 export { default as HandThink } from '../../components/hand/think.vue'
+export { default as HeadBase } from '../../components/head/base.vue'
 export { default as HatAuris } from '../../components/hat/auris.vue'
 export { default as HatAurisfluo } from '../../components/hat/aurisfluo.vue'
 export { default as HatBirthday } from '../../components/hat/birthday.vue'
@@ -90,7 +71,26 @@ export { default as HatTigre } from '../../components/hat/tigre.vue'
 export { default as HatTrinet } from '../../components/hat/trinet.vue'
 export { default as HatUnited } from '../../components/hat/united.vue'
 export { default as HatVisera } from '../../components/hat/visera.vue'
-export { default as HeadBase } from '../../components/head/base.vue'
+export { default as EyeBad } from '../../components/eye/bad.vue'
+export { default as EyeBroken } from '../../components/eye/broken.vue'
+export { default as EyeConfused } from '../../components/eye/confused.vue'
+export { default as EyeHappy } from '../../components/eye/happy.vue'
+export { default as EyeHeart } from '../../components/eye/heart.vue'
+export { default as EyeLaugh } from '../../components/eye/laugh.vue'
+export { default as EyeLeft } from '../../components/eye/left.vue'
+export { default as EyeOpen } from '../../components/eye/open.vue'
+export { default as EyeParche } from '../../components/eye/parche.vue'
+export { default as EyeRight } from '../../components/eye/right.vue'
+export { default as EyeRoll } from '../../components/eye/roll.vue'
+export { default as EyeSad } from '../../components/eye/sad.vue'
+export { default as EyeSad2 } from '../../components/eye/sad2.vue'
+export { default as EyeSick } from '../../components/eye/sick.vue'
+export { default as EyeSmile } from '../../components/eye/smile.vue'
+export { default as EyeSmile2 } from '../../components/eye/smile2.vue'
+export { default as EyeSmirk } from '../../components/eye/smirk.vue'
+export { default as EyeTired } from '../../components/eye/tired.vue'
+export { default as EyeTired2 } from '../../components/eye/tired2.vue'
+export { default as EyeUp } from '../../components/eye/up.vue'
 export { default as MouthBarbijo } from '../../components/mouth/barbijo.vue'
 export { default as MouthGrim } from '../../components/mouth/grim.vue'
 export { default as MouthHappy } from '../../components/mouth/happy.vue'
@@ -120,26 +120,6 @@ export const LazyExtra2Cry = import('../../components/extra2/cry.vue' /* webpack
 export const LazyExtra2Moustache = import('../../components/extra2/moustache.vue' /* webpackChunkName: "components/extra2-moustache" */).then(c => wrapFunctional(c.default || c))
 export const LazyExtra2Sleep = import('../../components/extra2/sleep.vue' /* webpackChunkName: "components/extra2-sleep" */).then(c => wrapFunctional(c.default || c))
 export const LazyExtra2Sweat = import('../../components/extra2/sweat.vue' /* webpackChunkName: "components/extra2-sweat" */).then(c => wrapFunctional(c.default || c))
-export const LazyEyeBad = import('../../components/eye/bad.vue' /* webpackChunkName: "components/eye-bad" */).then(c => wrapFunctional(c.default || c))
-export const LazyEyeBroken = import('../../components/eye/broken.vue' /* webpackChunkName: "components/eye-broken" */).then(c => wrapFunctional(c.default || c))
-export const LazyEyeConfused = import('../../components/eye/confused.vue' /* webpackChunkName: "components/eye-confused" */).then(c => wrapFunctional(c.default || c))
-export const LazyEyeHappy = import('../../components/eye/happy.vue' /* webpackChunkName: "components/eye-happy" */).then(c => wrapFunctional(c.default || c))
-export const LazyEyeHeart = import('../../components/eye/heart.vue' /* webpackChunkName: "components/eye-heart" */).then(c => wrapFunctional(c.default || c))
-export const LazyEyeLaugh = import('../../components/eye/laugh.vue' /* webpackChunkName: "components/eye-laugh" */).then(c => wrapFunctional(c.default || c))
-export const LazyEyeLeft = import('../../components/eye/left.vue' /* webpackChunkName: "components/eye-left" */).then(c => wrapFunctional(c.default || c))
-export const LazyEyeOpen = import('../../components/eye/open.vue' /* webpackChunkName: "components/eye-open" */).then(c => wrapFunctional(c.default || c))
-export const LazyEyeParche = import('../../components/eye/parche.vue' /* webpackChunkName: "components/eye-parche" */).then(c => wrapFunctional(c.default || c))
-export const LazyEyeRight = import('../../components/eye/right.vue' /* webpackChunkName: "components/eye-right" */).then(c => wrapFunctional(c.default || c))
-export const LazyEyeRoll = import('../../components/eye/roll.vue' /* webpackChunkName: "components/eye-roll" */).then(c => wrapFunctional(c.default || c))
-export const LazyEyeSad = import('../../components/eye/sad.vue' /* webpackChunkName: "components/eye-sad" */).then(c => wrapFunctional(c.default || c))
-export const LazyEyeSad2 = import('../../components/eye/sad2.vue' /* webpackChunkName: "components/eye-sad2" */).then(c => wrapFunctional(c.default || c))
-export const LazyEyeSick = import('../../components/eye/sick.vue' /* webpackChunkName: "components/eye-sick" */).then(c => wrapFunctional(c.default || c))
-export const LazyEyeSmile = import('../../components/eye/smile.vue' /* webpackChunkName: "components/eye-smile" */).then(c => wrapFunctional(c.default || c))
-export const LazyEyeSmile2 = import('../../components/eye/smile2.vue' /* webpackChunkName: "components/eye-smile2" */).then(c => wrapFunctional(c.default || c))
-export const LazyEyeSmirk = import('../../components/eye/smirk.vue' /* webpackChunkName: "components/eye-smirk" */).then(c => wrapFunctional(c.default || c))
-export const LazyEyeTired = import('../../components/eye/tired.vue' /* webpackChunkName: "components/eye-tired" */).then(c => wrapFunctional(c.default || c))
-export const LazyEyeTired2 = import('../../components/eye/tired2.vue' /* webpackChunkName: "components/eye-tired2" */).then(c => wrapFunctional(c.default || c))
-export const LazyEyeUp = import('../../components/eye/up.vue' /* webpackChunkName: "components/eye-up" */).then(c => wrapFunctional(c.default || c))
 export const LazyHandBadge = import('../../components/hand/badge.vue' /* webpackChunkName: "components/hand-badge" */).then(c => wrapFunctional(c.default || c))
 export const LazyHandBeer = import('../../components/hand/beer.vue' /* webpackChunkName: "components/hand-beer" */).then(c => wrapFunctional(c.default || c))
 export const LazyHandCake = import('../../components/hand/cake.vue' /* webpackChunkName: "components/hand-cake" */).then(c => wrapFunctional(c.default || c))
@@ -177,6 +157,7 @@ export const LazyHandTea = import('../../components/hand/tea.vue' /* webpackChun
 export const LazyHandTeacup = import('../../components/hand/teacup.vue' /* webpackChunkName: "components/hand-teacup" */).then(c => wrapFunctional(c.default || c))
 export const LazyHandTenis = import('../../components/hand/tenis.vue' /* webpackChunkName: "components/hand-tenis" */).then(c => wrapFunctional(c.default || c))
 export const LazyHandThink = import('../../components/hand/think.vue' /* webpackChunkName: "components/hand-think" */).then(c => wrapFunctional(c.default || c))
+export const LazyHeadBase = import('../../components/head/base.vue' /* webpackChunkName: "components/head-base" */).then(c => wrapFunctional(c.default || c))
 export const LazyHatAuris = import('../../components/hat/auris.vue' /* webpackChunkName: "components/hat-auris" */).then(c => wrapFunctional(c.default || c))
 export const LazyHatAurisfluo = import('../../components/hat/aurisfluo.vue' /* webpackChunkName: "components/hat-aurisfluo" */).then(c => wrapFunctional(c.default || c))
 export const LazyHatBirthday = import('../../components/hat/birthday.vue' /* webpackChunkName: "components/hat-birthday" */).then(c => wrapFunctional(c.default || c))
@@ -196,7 +177,26 @@ export const LazyHatTigre = import('../../components/hat/tigre.vue' /* webpackCh
 export const LazyHatTrinet = import('../../components/hat/trinet.vue' /* webpackChunkName: "components/hat-trinet" */).then(c => wrapFunctional(c.default || c))
 export const LazyHatUnited = import('../../components/hat/united.vue' /* webpackChunkName: "components/hat-united" */).then(c => wrapFunctional(c.default || c))
 export const LazyHatVisera = import('../../components/hat/visera.vue' /* webpackChunkName: "components/hat-visera" */).then(c => wrapFunctional(c.default || c))
-export const LazyHeadBase = import('../../components/head/base.vue' /* webpackChunkName: "components/head-base" */).then(c => wrapFunctional(c.default || c))
+export const LazyEyeBad = import('../../components/eye/bad.vue' /* webpackChunkName: "components/eye-bad" */).then(c => wrapFunctional(c.default || c))
+export const LazyEyeBroken = import('../../components/eye/broken.vue' /* webpackChunkName: "components/eye-broken" */).then(c => wrapFunctional(c.default || c))
+export const LazyEyeConfused = import('../../components/eye/confused.vue' /* webpackChunkName: "components/eye-confused" */).then(c => wrapFunctional(c.default || c))
+export const LazyEyeHappy = import('../../components/eye/happy.vue' /* webpackChunkName: "components/eye-happy" */).then(c => wrapFunctional(c.default || c))
+export const LazyEyeHeart = import('../../components/eye/heart.vue' /* webpackChunkName: "components/eye-heart" */).then(c => wrapFunctional(c.default || c))
+export const LazyEyeLaugh = import('../../components/eye/laugh.vue' /* webpackChunkName: "components/eye-laugh" */).then(c => wrapFunctional(c.default || c))
+export const LazyEyeLeft = import('../../components/eye/left.vue' /* webpackChunkName: "components/eye-left" */).then(c => wrapFunctional(c.default || c))
+export const LazyEyeOpen = import('../../components/eye/open.vue' /* webpackChunkName: "components/eye-open" */).then(c => wrapFunctional(c.default || c))
+export const LazyEyeParche = import('../../components/eye/parche.vue' /* webpackChunkName: "components/eye-parche" */).then(c => wrapFunctional(c.default || c))
+export const LazyEyeRight = import('../../components/eye/right.vue' /* webpackChunkName: "components/eye-right" */).then(c => wrapFunctional(c.default || c))
+export const LazyEyeRoll = import('../../components/eye/roll.vue' /* webpackChunkName: "components/eye-roll" */).then(c => wrapFunctional(c.default || c))
+export const LazyEyeSad = import('../../components/eye/sad.vue' /* webpackChunkName: "components/eye-sad" */).then(c => wrapFunctional(c.default || c))
+export const LazyEyeSad2 = import('../../components/eye/sad2.vue' /* webpackChunkName: "components/eye-sad2" */).then(c => wrapFunctional(c.default || c))
+export const LazyEyeSick = import('../../components/eye/sick.vue' /* webpackChunkName: "components/eye-sick" */).then(c => wrapFunctional(c.default || c))
+export const LazyEyeSmile = import('../../components/eye/smile.vue' /* webpackChunkName: "components/eye-smile" */).then(c => wrapFunctional(c.default || c))
+export const LazyEyeSmile2 = import('../../components/eye/smile2.vue' /* webpackChunkName: "components/eye-smile2" */).then(c => wrapFunctional(c.default || c))
+export const LazyEyeSmirk = import('../../components/eye/smirk.vue' /* webpackChunkName: "components/eye-smirk" */).then(c => wrapFunctional(c.default || c))
+export const LazyEyeTired = import('../../components/eye/tired.vue' /* webpackChunkName: "components/eye-tired" */).then(c => wrapFunctional(c.default || c))
+export const LazyEyeTired2 = import('../../components/eye/tired2.vue' /* webpackChunkName: "components/eye-tired2" */).then(c => wrapFunctional(c.default || c))
+export const LazyEyeUp = import('../../components/eye/up.vue' /* webpackChunkName: "components/eye-up" */).then(c => wrapFunctional(c.default || c))
 export const LazyMouthBarbijo = import('../../components/mouth/barbijo.vue' /* webpackChunkName: "components/mouth-barbijo" */).then(c => wrapFunctional(c.default || c))
 export const LazyMouthGrim = import('../../components/mouth/grim.vue' /* webpackChunkName: "components/mouth-grim" */).then(c => wrapFunctional(c.default || c))
 export const LazyMouthHappy = import('../../components/mouth/happy.vue' /* webpackChunkName: "components/mouth-happy" */).then(c => wrapFunctional(c.default || c))
