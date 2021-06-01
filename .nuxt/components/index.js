@@ -8,6 +8,12 @@ export { default as ExtraGlasses } from '../../components/extra/glasses.vue'
 export { default as ExtraHeadmic } from '../../components/extra/headmic.vue'
 export { default as ExtraLapiz } from '../../components/extra/lapiz.vue'
 export { default as ExtraSunglasses } from '../../components/extra/sunglasses.vue'
+export { default as Extra2Bigsweat } from '../../components/extra2/bigsweat.vue'
+export { default as Extra2Confetti } from '../../components/extra2/confetti.vue'
+export { default as Extra2Cry } from '../../components/extra2/cry.vue'
+export { default as Extra2Moustache } from '../../components/extra2/moustache.vue'
+export { default as Extra2Sleep } from '../../components/extra2/sleep.vue'
+export { default as Extra2Sweat } from '../../components/extra2/sweat.vue'
 export { default as EyeBad } from '../../components/eye/bad.vue'
 export { default as EyeBroken } from '../../components/eye/broken.vue'
 export { default as EyeConfused } from '../../components/eye/confused.vue'
@@ -28,31 +34,6 @@ export { default as EyeSmirk } from '../../components/eye/smirk.vue'
 export { default as EyeTired } from '../../components/eye/tired.vue'
 export { default as EyeTired2 } from '../../components/eye/tired2.vue'
 export { default as EyeUp } from '../../components/eye/up.vue'
-export { default as Extra2Bigsweat } from '../../components/extra2/bigsweat.vue'
-export { default as Extra2Confetti } from '../../components/extra2/confetti.vue'
-export { default as Extra2Cry } from '../../components/extra2/cry.vue'
-export { default as Extra2Moustache } from '../../components/extra2/moustache.vue'
-export { default as Extra2Sleep } from '../../components/extra2/sleep.vue'
-export { default as Extra2Sweat } from '../../components/extra2/sweat.vue'
-export { default as HatAuris } from '../../components/hat/auris.vue'
-export { default as HatAurisfluo } from '../../components/hat/aurisfluo.vue'
-export { default as HatBirthday } from '../../components/hat/birthday.vue'
-export { default as HatChef } from '../../components/hat/chef.vue'
-export { default as HatCommvault } from '../../components/hat/commvault.vue'
-export { default as HatCop } from '../../components/hat/cop.vue'
-export { default as HatDiego } from '../../components/hat/diego.vue'
-export { default as HatDoc } from '../../components/hat/doc.vue'
-export { default as HatElliemae } from '../../components/hat/elliemae.vue'
-export { default as HatNieve } from '../../components/hat/nieve.vue'
-export { default as HatNoel } from '../../components/hat/noel.vue'
-export { default as HatPaypal } from '../../components/hat/paypal.vue'
-export { default as HatSap } from '../../components/hat/sap.vue'
-export { default as HatSleep } from '../../components/hat/sleep.vue'
-export { default as HatSmoking } from '../../components/hat/smoking.vue'
-export { default as HatTigre } from '../../components/hat/tigre.vue'
-export { default as HatTrinet } from '../../components/hat/trinet.vue'
-export { default as HatUnited } from '../../components/hat/united.vue'
-export { default as HatVisera } from '../../components/hat/visera.vue'
 export { default as HandBadge } from '../../components/hand/badge.vue'
 export { default as HandBeer } from '../../components/hand/beer.vue'
 export { default as HandCake } from '../../components/hand/cake.vue'
@@ -90,6 +71,25 @@ export { default as HandTea } from '../../components/hand/tea.vue'
 export { default as HandTeacup } from '../../components/hand/teacup.vue'
 export { default as HandTenis } from '../../components/hand/tenis.vue'
 export { default as HandThink } from '../../components/hand/think.vue'
+export { default as HatAuris } from '../../components/hat/auris.vue'
+export { default as HatAurisfluo } from '../../components/hat/aurisfluo.vue'
+export { default as HatBirthday } from '../../components/hat/birthday.vue'
+export { default as HatChef } from '../../components/hat/chef.vue'
+export { default as HatCommvault } from '../../components/hat/commvault.vue'
+export { default as HatCop } from '../../components/hat/cop.vue'
+export { default as HatDiego } from '../../components/hat/diego.vue'
+export { default as HatDoc } from '../../components/hat/doc.vue'
+export { default as HatElliemae } from '../../components/hat/elliemae.vue'
+export { default as HatNieve } from '../../components/hat/nieve.vue'
+export { default as HatNoel } from '../../components/hat/noel.vue'
+export { default as HatPaypal } from '../../components/hat/paypal.vue'
+export { default as HatSap } from '../../components/hat/sap.vue'
+export { default as HatSleep } from '../../components/hat/sleep.vue'
+export { default as HatSmoking } from '../../components/hat/smoking.vue'
+export { default as HatTigre } from '../../components/hat/tigre.vue'
+export { default as HatTrinet } from '../../components/hat/trinet.vue'
+export { default as HatUnited } from '../../components/hat/united.vue'
+export { default as HatVisera } from '../../components/hat/visera.vue'
 export { default as HeadBase } from '../../components/head/base.vue'
 export { default as MouthBarbijo } from '../../components/mouth/barbijo.vue'
 export { default as MouthGrim } from '../../components/mouth/grim.vue'
@@ -114,6 +114,12 @@ export const LazyExtraGlasses = import('../../components/extra/glasses.vue' /* w
 export const LazyExtraHeadmic = import('../../components/extra/headmic.vue' /* webpackChunkName: "components/extra-headmic" */).then(c => wrapFunctional(c.default || c))
 export const LazyExtraLapiz = import('../../components/extra/lapiz.vue' /* webpackChunkName: "components/extra-lapiz" */).then(c => wrapFunctional(c.default || c))
 export const LazyExtraSunglasses = import('../../components/extra/sunglasses.vue' /* webpackChunkName: "components/extra-sunglasses" */).then(c => wrapFunctional(c.default || c))
+export const LazyExtra2Bigsweat = import('../../components/extra2/bigsweat.vue' /* webpackChunkName: "components/extra2-bigsweat" */).then(c => wrapFunctional(c.default || c))
+export const LazyExtra2Confetti = import('../../components/extra2/confetti.vue' /* webpackChunkName: "components/extra2-confetti" */).then(c => wrapFunctional(c.default || c))
+export const LazyExtra2Cry = import('../../components/extra2/cry.vue' /* webpackChunkName: "components/extra2-cry" */).then(c => wrapFunctional(c.default || c))
+export const LazyExtra2Moustache = import('../../components/extra2/moustache.vue' /* webpackChunkName: "components/extra2-moustache" */).then(c => wrapFunctional(c.default || c))
+export const LazyExtra2Sleep = import('../../components/extra2/sleep.vue' /* webpackChunkName: "components/extra2-sleep" */).then(c => wrapFunctional(c.default || c))
+export const LazyExtra2Sweat = import('../../components/extra2/sweat.vue' /* webpackChunkName: "components/extra2-sweat" */).then(c => wrapFunctional(c.default || c))
 export const LazyEyeBad = import('../../components/eye/bad.vue' /* webpackChunkName: "components/eye-bad" */).then(c => wrapFunctional(c.default || c))
 export const LazyEyeBroken = import('../../components/eye/broken.vue' /* webpackChunkName: "components/eye-broken" */).then(c => wrapFunctional(c.default || c))
 export const LazyEyeConfused = import('../../components/eye/confused.vue' /* webpackChunkName: "components/eye-confused" */).then(c => wrapFunctional(c.default || c))
@@ -134,31 +140,6 @@ export const LazyEyeSmirk = import('../../components/eye/smirk.vue' /* webpackCh
 export const LazyEyeTired = import('../../components/eye/tired.vue' /* webpackChunkName: "components/eye-tired" */).then(c => wrapFunctional(c.default || c))
 export const LazyEyeTired2 = import('../../components/eye/tired2.vue' /* webpackChunkName: "components/eye-tired2" */).then(c => wrapFunctional(c.default || c))
 export const LazyEyeUp = import('../../components/eye/up.vue' /* webpackChunkName: "components/eye-up" */).then(c => wrapFunctional(c.default || c))
-export const LazyExtra2Bigsweat = import('../../components/extra2/bigsweat.vue' /* webpackChunkName: "components/extra2-bigsweat" */).then(c => wrapFunctional(c.default || c))
-export const LazyExtra2Confetti = import('../../components/extra2/confetti.vue' /* webpackChunkName: "components/extra2-confetti" */).then(c => wrapFunctional(c.default || c))
-export const LazyExtra2Cry = import('../../components/extra2/cry.vue' /* webpackChunkName: "components/extra2-cry" */).then(c => wrapFunctional(c.default || c))
-export const LazyExtra2Moustache = import('../../components/extra2/moustache.vue' /* webpackChunkName: "components/extra2-moustache" */).then(c => wrapFunctional(c.default || c))
-export const LazyExtra2Sleep = import('../../components/extra2/sleep.vue' /* webpackChunkName: "components/extra2-sleep" */).then(c => wrapFunctional(c.default || c))
-export const LazyExtra2Sweat = import('../../components/extra2/sweat.vue' /* webpackChunkName: "components/extra2-sweat" */).then(c => wrapFunctional(c.default || c))
-export const LazyHatAuris = import('../../components/hat/auris.vue' /* webpackChunkName: "components/hat-auris" */).then(c => wrapFunctional(c.default || c))
-export const LazyHatAurisfluo = import('../../components/hat/aurisfluo.vue' /* webpackChunkName: "components/hat-aurisfluo" */).then(c => wrapFunctional(c.default || c))
-export const LazyHatBirthday = import('../../components/hat/birthday.vue' /* webpackChunkName: "components/hat-birthday" */).then(c => wrapFunctional(c.default || c))
-export const LazyHatChef = import('../../components/hat/chef.vue' /* webpackChunkName: "components/hat-chef" */).then(c => wrapFunctional(c.default || c))
-export const LazyHatCommvault = import('../../components/hat/commvault.vue' /* webpackChunkName: "components/hat-commvault" */).then(c => wrapFunctional(c.default || c))
-export const LazyHatCop = import('../../components/hat/cop.vue' /* webpackChunkName: "components/hat-cop" */).then(c => wrapFunctional(c.default || c))
-export const LazyHatDiego = import('../../components/hat/diego.vue' /* webpackChunkName: "components/hat-diego" */).then(c => wrapFunctional(c.default || c))
-export const LazyHatDoc = import('../../components/hat/doc.vue' /* webpackChunkName: "components/hat-doc" */).then(c => wrapFunctional(c.default || c))
-export const LazyHatElliemae = import('../../components/hat/elliemae.vue' /* webpackChunkName: "components/hat-elliemae" */).then(c => wrapFunctional(c.default || c))
-export const LazyHatNieve = import('../../components/hat/nieve.vue' /* webpackChunkName: "components/hat-nieve" */).then(c => wrapFunctional(c.default || c))
-export const LazyHatNoel = import('../../components/hat/noel.vue' /* webpackChunkName: "components/hat-noel" */).then(c => wrapFunctional(c.default || c))
-export const LazyHatPaypal = import('../../components/hat/paypal.vue' /* webpackChunkName: "components/hat-paypal" */).then(c => wrapFunctional(c.default || c))
-export const LazyHatSap = import('../../components/hat/sap.vue' /* webpackChunkName: "components/hat-sap" */).then(c => wrapFunctional(c.default || c))
-export const LazyHatSleep = import('../../components/hat/sleep.vue' /* webpackChunkName: "components/hat-sleep" */).then(c => wrapFunctional(c.default || c))
-export const LazyHatSmoking = import('../../components/hat/smoking.vue' /* webpackChunkName: "components/hat-smoking" */).then(c => wrapFunctional(c.default || c))
-export const LazyHatTigre = import('../../components/hat/tigre.vue' /* webpackChunkName: "components/hat-tigre" */).then(c => wrapFunctional(c.default || c))
-export const LazyHatTrinet = import('../../components/hat/trinet.vue' /* webpackChunkName: "components/hat-trinet" */).then(c => wrapFunctional(c.default || c))
-export const LazyHatUnited = import('../../components/hat/united.vue' /* webpackChunkName: "components/hat-united" */).then(c => wrapFunctional(c.default || c))
-export const LazyHatVisera = import('../../components/hat/visera.vue' /* webpackChunkName: "components/hat-visera" */).then(c => wrapFunctional(c.default || c))
 export const LazyHandBadge = import('../../components/hand/badge.vue' /* webpackChunkName: "components/hand-badge" */).then(c => wrapFunctional(c.default || c))
 export const LazyHandBeer = import('../../components/hand/beer.vue' /* webpackChunkName: "components/hand-beer" */).then(c => wrapFunctional(c.default || c))
 export const LazyHandCake = import('../../components/hand/cake.vue' /* webpackChunkName: "components/hand-cake" */).then(c => wrapFunctional(c.default || c))
@@ -196,6 +177,25 @@ export const LazyHandTea = import('../../components/hand/tea.vue' /* webpackChun
 export const LazyHandTeacup = import('../../components/hand/teacup.vue' /* webpackChunkName: "components/hand-teacup" */).then(c => wrapFunctional(c.default || c))
 export const LazyHandTenis = import('../../components/hand/tenis.vue' /* webpackChunkName: "components/hand-tenis" */).then(c => wrapFunctional(c.default || c))
 export const LazyHandThink = import('../../components/hand/think.vue' /* webpackChunkName: "components/hand-think" */).then(c => wrapFunctional(c.default || c))
+export const LazyHatAuris = import('../../components/hat/auris.vue' /* webpackChunkName: "components/hat-auris" */).then(c => wrapFunctional(c.default || c))
+export const LazyHatAurisfluo = import('../../components/hat/aurisfluo.vue' /* webpackChunkName: "components/hat-aurisfluo" */).then(c => wrapFunctional(c.default || c))
+export const LazyHatBirthday = import('../../components/hat/birthday.vue' /* webpackChunkName: "components/hat-birthday" */).then(c => wrapFunctional(c.default || c))
+export const LazyHatChef = import('../../components/hat/chef.vue' /* webpackChunkName: "components/hat-chef" */).then(c => wrapFunctional(c.default || c))
+export const LazyHatCommvault = import('../../components/hat/commvault.vue' /* webpackChunkName: "components/hat-commvault" */).then(c => wrapFunctional(c.default || c))
+export const LazyHatCop = import('../../components/hat/cop.vue' /* webpackChunkName: "components/hat-cop" */).then(c => wrapFunctional(c.default || c))
+export const LazyHatDiego = import('../../components/hat/diego.vue' /* webpackChunkName: "components/hat-diego" */).then(c => wrapFunctional(c.default || c))
+export const LazyHatDoc = import('../../components/hat/doc.vue' /* webpackChunkName: "components/hat-doc" */).then(c => wrapFunctional(c.default || c))
+export const LazyHatElliemae = import('../../components/hat/elliemae.vue' /* webpackChunkName: "components/hat-elliemae" */).then(c => wrapFunctional(c.default || c))
+export const LazyHatNieve = import('../../components/hat/nieve.vue' /* webpackChunkName: "components/hat-nieve" */).then(c => wrapFunctional(c.default || c))
+export const LazyHatNoel = import('../../components/hat/noel.vue' /* webpackChunkName: "components/hat-noel" */).then(c => wrapFunctional(c.default || c))
+export const LazyHatPaypal = import('../../components/hat/paypal.vue' /* webpackChunkName: "components/hat-paypal" */).then(c => wrapFunctional(c.default || c))
+export const LazyHatSap = import('../../components/hat/sap.vue' /* webpackChunkName: "components/hat-sap" */).then(c => wrapFunctional(c.default || c))
+export const LazyHatSleep = import('../../components/hat/sleep.vue' /* webpackChunkName: "components/hat-sleep" */).then(c => wrapFunctional(c.default || c))
+export const LazyHatSmoking = import('../../components/hat/smoking.vue' /* webpackChunkName: "components/hat-smoking" */).then(c => wrapFunctional(c.default || c))
+export const LazyHatTigre = import('../../components/hat/tigre.vue' /* webpackChunkName: "components/hat-tigre" */).then(c => wrapFunctional(c.default || c))
+export const LazyHatTrinet = import('../../components/hat/trinet.vue' /* webpackChunkName: "components/hat-trinet" */).then(c => wrapFunctional(c.default || c))
+export const LazyHatUnited = import('../../components/hat/united.vue' /* webpackChunkName: "components/hat-united" */).then(c => wrapFunctional(c.default || c))
+export const LazyHatVisera = import('../../components/hat/visera.vue' /* webpackChunkName: "components/hat-visera" */).then(c => wrapFunctional(c.default || c))
 export const LazyHeadBase = import('../../components/head/base.vue' /* webpackChunkName: "components/head-base" */).then(c => wrapFunctional(c.default || c))
 export const LazyMouthBarbijo = import('../../components/mouth/barbijo.vue' /* webpackChunkName: "components/mouth-barbijo" */).then(c => wrapFunctional(c.default || c))
 export const LazyMouthGrim = import('../../components/mouth/grim.vue' /* webpackChunkName: "components/mouth-grim" */).then(c => wrapFunctional(c.default || c))
