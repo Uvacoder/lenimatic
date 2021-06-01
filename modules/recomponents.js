@@ -7,7 +7,7 @@ export default function(moduleOptions) {
       componentArr.push(dirs[i].kebabName)
     }
     this.addPlugin({
-      src: resolve(__dirname, '../plugins/injecter.client.js'),
+      src: resolve(__dirname, '../plugins/injecter.js'),
       options: componentArr
     })    
   })

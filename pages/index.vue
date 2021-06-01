@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-
+<client-only>
     <div class="partes">
       <h1 class="logo">
         <svg overflow="visible" viewBox="0 0 35.9 9.9">
@@ -25,11 +25,7 @@
     </div>
 
     <main class="leni-container">
-      <nav class="main-nav">
-        <button @click="exportLeniPNG()">Export PNG</button>
-        <button @click="exportLeniSVG()">Export SVG</button>
-        <button @click="chooseOne()">Random</button>
-      </nav>  
+
       <div class="scene">
         <div class="box">
           <div class="box__face box__face--back"></div>
@@ -40,7 +36,7 @@
         </div>
       </div>
 
-      <svg v-if="!loadingLeni" class="leni-head" viewBox="0 0 200 200" role="img" aria-labelledby="leni desc" tabindex="1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <svg class="leni-head" viewBox="0 0 200 200" role="img" aria-labelledby="leni desc" tabindex="1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <title id="leni">Leni</title>
         <desc id="desc">Choose parts to build your leni</desc>
        <g id="head">
@@ -62,36 +58,42 @@
         <component v-for="(part, parent) in leni" v-if="leni[parent]!== ''" :is="`${parent}-${part}`" :key="`${parent}-${part}`"/>   
       </svg>
     </main>    
+      <nav class="main-nav">
+        <button @click="chooseOne()">
+          <svg fill='none' stroke='#f8f3dc' stroke-width='8' stroke-dashoffset='0' stroke-dasharray='0' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x="10" y="10" width="80" height="80"/> <circle cx="30" cy="30" r="4"/> <circle cx="70" cy="30" r="4"/> <circle cx="50" cy="50" r="4"/> <circle cx="30" cy="70" r="4"/> <circle cx="70" cy="70" r="4"/></svg>
+          Random Leni</button>        
+        <button @click="exportLeniPNG()">Export PNG</button>
+        <button @click="exportLeniSVG()">Export SVG</button>
+
+      </nav> 
+</client-only>
+
   </div>
 </template>
 
 <script>
 export default {
   name: "app",
-  data: function () {
-    return {
-      tabActive: "eye",
-      loadingLeni: true,
-      leni: {
+  asyncData({app, route}) {
+      var leni = {
         eye: "open",
         mouth: "smile",
-        hat: "",
-        hand: "",
-        extra: "",
-        extra2: "",
-      },
-      parts: this.$parts,
-    };
+        hat: '', hand: '', extra: '', extra2: ''
+      }
+
+      if (route.query.e) {
+        leni.eye = route.query.e
+        leni.mouth = route.query.m
+        leni.hat = route.query.ht
+        leni.hand = route.query.hd
+        leni.extra = route.query.x
+        leni.extra2 = route.query.xx
+      }
+      var tabActive = "eye"
+      var parts = app.$parts
+      return { tabActive, parts, leni };
+
   },
-  mounted() {
-    if (this.$route.query.e) { this.leni.eye = this.$route.query.e  }
-    if (this.$route.query.m) { this.leni.mouth = this.$route.query.m  }
-    if (this.$route.query.x) { this.leni.extra = this.$route.query.x  }
-    if (this.$route.query.hd) { this.leni.hand = this.$route.query.hd  }
-    if (this.$route.query.ht) { this.leni.hat = this.$route.query.ht  }
-    if (this.$route.query.xx) { this.leni.extra2 = this.$route.query.xx  }
-    this.loadingLeni = false
-  },  
   methods: {   
     setPart(parent, item) {
       if (this.leni[parent] === item){
@@ -107,7 +109,7 @@ export default {
       return parts[keys[random]];
     },
     chooseOne() {
-      var randomnumber = Math.floor(Math.random() * (Object.keys(this.leni).length - 2 + 1)) + 2;
+      var randomnumber = Math.floor(Math.random() * (Object.keys(this.leni).length - 1 + 1)) + 1;
       const types = Object.keys(this.leni).slice(0,randomnumber)
       const pepes = Object.keys(this.leni)
       for (let e = 0; e < pepes.length; e++) {
@@ -228,32 +230,30 @@ button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: grid;
-  grid-template-columns: 600px 1fr;
+  grid-template-columns: 600px 1fr 120px;
   text-align: center;
 }
 
 .main-nav {
   align-items: center;
   display: flex;
-  justify-content: space-between;
   margin: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 99;
-  margin: 10px;
+  flex-direction: column;
   button {
-    background: #1a5469;
-    border-radius: 50px;
+    background: transparent;
     border: 0;
-    color: #dad9d6;
-    font-weight: bold;
-    margin: 0 0 0 10px;
-    transition: all ease 0.2s;
-    padding: 8px 15px;
-    user-select: none;
-    &:hover,
-    &:focus {
+    border-bottom: 1px solid rgba(26,84,105,0.9);
+    color: #f8f3dc;
+    text-align: center;
+    opacity: 0.75;
+    width: 100%;
+    padding: 10px;
+    svg {
+      width: 40%;
+      display: block;
+      margin: 0 auto 10px;
+    }
+    &:hover {
       background: #377890;
       color: var(--textColor);
     }
@@ -261,7 +261,7 @@ button {
 }
 
 .logo {
-  margin: 20px 0 10px;
+  margin: 20px 0 20px;
   svg {
     max-height: 60px;
     width: 100%;
@@ -272,6 +272,7 @@ button {
   border-bottom: 0;
   position: relative;
   border-left: 2px solid rgba(26,84,105,.5);
+  border-right: 2px solid rgba(26,84,105,.5);
   height: 100vh;
 }
 
@@ -286,25 +287,24 @@ button {
 
 .tabs {
   display: flex;
-  border-bottom: 2px solid rgba(26,84,105,.5);
-  border-top: 2px solid rgba(26,84,105,.5);
+  padding: 0 15px;
   > button {
     padding: 10px 20px;
+    margin: 0 5px;
     background: transparent;
-    border: 1px solid transparent;
-    border-right: 2px solid rgba(26,84,105,.5);
+    border: 1px solid rgba(26,84,105,0.9);
+    border-radius: 50px;
     flex: 1;
     color: #f8f3dc;
     text-align: center;
-    &:last-child {
-      border-right-color: transparent;
-    }
+    opacity: 0.75;
     &:hover {
-      color: #ffca30;
-    }    
+      opacity: 1;
+    }
     &.active {
       background-color: #377890;
-
+      border: 1px solid #aaa;
+      opacity: 1;
     }
   }
 }
