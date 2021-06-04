@@ -316,22 +316,13 @@ export default {
   --widthTransform: calc(var(--width) / 2);
   --widthreTransform: calc(var(--widthTransform) - var(--depthTransform));
 }
-
+html,
 body {
-  background-size: 700px;
   color: var(--textColor);
   margin: 0 auto;
-  &:before {
-    content: "";
-    background-color: var(--bgColor);
-    display: block;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    opacity: 0.4;
-    z-index: -1;
-  }
+  background-color: var(--bgColor);
+background-image: linear-gradient(transparent 90%, rgba(26, 84, 105, 0.25));
+    background-size: 1px 11px;    
 }
 h1 {
   margin: 0.5rem auto;
@@ -356,6 +347,11 @@ button {
   display: grid;
   grid-template-columns: 600px 1fr 120px;
   text-align: center;
+  @media (max-width: 960px) {
+    grid-template-columns: 100vw;
+    grid-auto-rows: 460px 1fr 100px;
+  }
+
 }
 
 .main-nav {
@@ -365,6 +361,9 @@ button {
   flex-direction: column;
 background-image: linear-gradient(transparent 90%, rgba(26, 84, 105, 0.25));
     background-size: 1px 11px;  
+         @media (max-width: 960px) {
+    flex-direction: row;
+  }    
   button {
     background: transparent;
     border: 0;
@@ -414,6 +413,9 @@ background-image: linear-gradient(transparent 90%, rgba(26, 84, 105, 0.25));
 .tabs {
   display: flex;
   padding: 0 15px;
+  @media (max-width: 960px) {
+    flex-wrap: wrap;
+  }  
   > button {
     padding: 10px 20px;
     margin: 0 5px;
@@ -424,6 +426,11 @@ background-image: linear-gradient(transparent 90%, rgba(26, 84, 105, 0.25));
     color: #f8f3dc;
     text-align: center;
     opacity: 0.75;
+
+  @media (max-width: 960px) {
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }      
     &:hover {
       opacity: 1;
     }
@@ -442,6 +449,7 @@ background-image: linear-gradient(transparent 90%, rgba(26, 84, 105, 0.25));
   padding: 20px 0;
   &.active {
     display: block;
+      background-color: var(--bgColor);
   }
   button {
     width: 100px;
@@ -467,6 +475,9 @@ background-image: linear-gradient(transparent 90%, rgba(26, 84, 105, 0.25));
 .partes {
   background-image: linear-gradient(transparent 90%, rgba(26, 84, 105, 0.25));
     background-size: 1px 11px;
+      @media (max-width: 960px) {
+    overflow: auto;
+  }    
 }
 
 .scene {
