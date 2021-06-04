@@ -1,4 +1,7 @@
 {
+  "Scene": {
+    "description": "Auto imported from components/global/scene.vue"
+  },
   "ExtraBeard": {
     "description": "Auto imported from components/extra/beard.vue"
   },

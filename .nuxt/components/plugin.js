@@ -2,6 +2,7 @@ import Vue from 'vue'
 import { wrapFunctional } from './utils'
 
 const components = {
+  Scene: () => import('../../components/global/scene.vue' /* webpackChunkName: "components/scene" */).then(c => wrapFunctional(c.default || c)),
   ExtraBeard: () => import('../../components/extra/beard.vue' /* webpackChunkName: "components/extra-beard" */).then(c => wrapFunctional(c.default || c)),
   ExtraBlush: () => import('../../components/extra/blush.vue' /* webpackChunkName: "components/extra-blush" */).then(c => wrapFunctional(c.default || c)),
   ExtraBowie: () => import('../../components/extra/bowie.vue' /* webpackChunkName: "components/extra-bowie" */).then(c => wrapFunctional(c.default || c)),

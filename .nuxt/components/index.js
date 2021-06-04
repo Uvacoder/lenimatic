@@ -1,5 +1,6 @@
 import { wrapFunctional } from './utils'
 
+export { default as Scene } from '../../components/global/scene.vue'
 export { default as ExtraBeard } from '../../components/extra/beard.vue'
 export { default as ExtraBlush } from '../../components/extra/blush.vue'
 export { default as ExtraBowie } from '../../components/extra/bowie.vue'
@@ -106,6 +107,7 @@ export { default as MouthTeeth } from '../../components/mouth/teeth.vue'
 export { default as MouthTongue } from '../../components/mouth/tongue.vue'
 export { default as MouthYum } from '../../components/mouth/yum.vue'
 
+export const LazyScene = import('../../components/global/scene.vue' /* webpackChunkName: "components/scene" */).then(c => wrapFunctional(c.default || c))
 export const LazyExtraBeard = import('../../components/extra/beard.vue' /* webpackChunkName: "components/extra-beard" */).then(c => wrapFunctional(c.default || c))
 export const LazyExtraBlush = import('../../components/extra/blush.vue' /* webpackChunkName: "components/extra-blush" */).then(c => wrapFunctional(c.default || c))
 export const LazyExtraBowie = import('../../components/extra/bowie.vue' /* webpackChunkName: "components/extra-bowie" */).then(c => wrapFunctional(c.default || c))

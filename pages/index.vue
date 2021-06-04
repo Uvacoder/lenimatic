@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-<client-only>
     <div class="partes">
       <h1 class="logo">
         <svg overflow="visible" viewBox="0 0 35.9 9.9">
@@ -18,7 +17,7 @@
         <template v-if="flipped">
         <button v-for="item in part" @click="setPart(parent, item)" :key="item" :class="{active: backleni[parent] === item}">
           <svg viewBox="0 0 200 200"  tabindex="1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <component :is="`${parent}-${item}`"/>
+            <component :is="`lazy-${parent}-${item}`"/>
           </svg>
         </button>
         </template>
@@ -26,7 +25,7 @@
 
         <button v-for="item in part" @click="setPart(parent, item)" :key="item" :class="{active: leni[parent] === item}">
           <svg viewBox="0 0 200 200"  tabindex="1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <component :is="`${parent}-${item}`"/>
+            <component :is="`lazy-${parent}-${item}`"/>
           </svg>
         </button>        
                 </template>
@@ -37,15 +36,8 @@
 
     <main class="leni-container">
 
-      <div class="scene">
-        <div class="box">
-          <div class="box__face box__face--back"></div>
-          <div class="box__face box__face--right"></div>
-          <div class="box__face box__face--left"></div>
-          <div class="box__face box__face--top"></div>
-          <div class="box__face box__face--bottom"></div>
-        </div>
-      </div>
+      <scene/>
+        
 <div class="flip-container" :class="{active: flipped}">
 	<div class="flipper">
 		<div class="front">
@@ -68,7 +60,7 @@
           <path fill="#141827" d="M136.49 164.6l-.61 5 1.5-1.5c-9.85.21-19.72.12-29.58.11q-18.73 0-37.49-.09c-3.33 0-6.66 0-10-.08l1.5 1.5c-.2-1.79.06-3.58-.3-5.36l-1.45 1.89 17.62.07h38.08q11.1 0 22.21-.09a1.5 1.5 0 000-3c-13.27.1-26.55.11-39.82.1q-16 0-31.93-.07h-6.16a1.53 1.53 0 00-1.45 1.9c.31 1.5 0 3.06.2 4.57a1.52 1.52 0 001.5 1.5c8.29.21 16.6.11 24.9.13q19.39.06 38.8 0c4.45 0 8.9 0 13.35-.1a1.54 1.54 0 001.5-1.5l.61-5c.25-1.89-2.75-1.88-2.98.02z" />
           <path fill="#141827" d="M62.2 164.84a55 55 0 00-2.82-18.61c-1.88-5.9-4.39-11.56-6.6-17.33a91.49 91.49 0 01-5.48-19.8 74.26 74.26 0 01-.47-15.2 70.06 70.06 0 014.76-21.76 48.29 48.29 0 0117.16-21.72A55.54 55.54 0 0184.85 43a58.42 58.42 0 0114.59-2.5 62.94 62.94 0 0122.12 3.5 52.72 52.72 0 0122 14c7 7.74 10.76 17.77 11.57 28.11a84 84 0 01-1.47 21.69 105.06 105.06 0 01-5.51 19.36c-3.77 9.63-9.12 18.72-11 29a56.91 56.91 0 00-.92 8.33c-.07 1.94 2.93 1.93 3 0a53.57 53.57 0 013.08-15.88c1.72-4.85 4-9.47 6.06-14.17C154 121.68 157.74 108 158.26 94c.42-11.45-1.95-23.15-8.45-32.73a51.59 51.59 0 00-21.35-17.64 68.05 68.05 0 00-24.12-6 62.06 62.06 0 00-29.4 5.91 50.81 50.81 0 00-22.86 20.78 65.21 65.21 0 00-7.69 23.92 77.94 77.94 0 001.89 30.63c3.35 12.41 10.11 23.79 12.3 36.53a45.93 45.93 0 01.62 9.44c-.07 1.93 2.93 1.93 3 0z" />
         </g>
-        <component v-for="(part, parent) in leni" v-if="leni[parent]!== ''" :is="`${parent}-${part}`" :key="`${parent}-${part}`"/>   
+        <component v-for="(part, parent) in leni" v-if="leni[parent]!== ''" :is="`lazy-${parent}-${part}`" :key="`${parent}-${part}`"/>   
       </svg>
 		</div>
 		<div class="back">
@@ -91,7 +83,7 @@
           <path fill="#141827" d="M136.49 164.6l-.61 5 1.5-1.5c-9.85.21-19.72.12-29.58.11q-18.73 0-37.49-.09c-3.33 0-6.66 0-10-.08l1.5 1.5c-.2-1.79.06-3.58-.3-5.36l-1.45 1.89 17.62.07h38.08q11.1 0 22.21-.09a1.5 1.5 0 000-3c-13.27.1-26.55.11-39.82.1q-16 0-31.93-.07h-6.16a1.53 1.53 0 00-1.45 1.9c.31 1.5 0 3.06.2 4.57a1.52 1.52 0 001.5 1.5c8.29.21 16.6.11 24.9.13q19.39.06 38.8 0c4.45 0 8.9 0 13.35-.1a1.54 1.54 0 001.5-1.5l.61-5c.25-1.89-2.75-1.88-2.98.02z" />
           <path fill="#141827" d="M62.2 164.84a55 55 0 00-2.82-18.61c-1.88-5.9-4.39-11.56-6.6-17.33a91.49 91.49 0 01-5.48-19.8 74.26 74.26 0 01-.47-15.2 70.06 70.06 0 014.76-21.76 48.29 48.29 0 0117.16-21.72A55.54 55.54 0 0184.85 43a58.42 58.42 0 0114.59-2.5 62.94 62.94 0 0122.12 3.5 52.72 52.72 0 0122 14c7 7.74 10.76 17.77 11.57 28.11a84 84 0 01-1.47 21.69 105.06 105.06 0 01-5.51 19.36c-3.77 9.63-9.12 18.72-11 29a56.91 56.91 0 00-.92 8.33c-.07 1.94 2.93 1.93 3 0a53.57 53.57 0 013.08-15.88c1.72-4.85 4-9.47 6.06-14.17C154 121.68 157.74 108 158.26 94c.42-11.45-1.95-23.15-8.45-32.73a51.59 51.59 0 00-21.35-17.64 68.05 68.05 0 00-24.12-6 62.06 62.06 0 00-29.4 5.91 50.81 50.81 0 00-22.86 20.78 65.21 65.21 0 00-7.69 23.92 77.94 77.94 0 001.89 30.63c3.35 12.41 10.11 23.79 12.3 36.53a45.93 45.93 0 01.62 9.44c-.07 1.93 2.93 1.93 3 0z" />
         </g>
-        <component v-for="(part, parent) in backleni" v-if="backleni[parent]!== ''" :is="`${parent}-${part}`" :key="`${parent}-${part}`"/>   
+        <component v-for="(part, parent) in backleni" v-if="backleni[parent]!== ''" :is="`lazy-${parent}-${part}`" :key="`${parent}-${part}`"/>   
       </svg>		
     </div>
 	</div>
@@ -106,12 +98,14 @@
         <button @click="exportLeniSVG()">Export SVG</button>
 
       </nav> 
-</client-only>
 
   </div>
 </template>
 
 <script>
+
+import jsonParts from '~/json/icons.json'
+
 export default {
   name: "app",
   asyncData({ app, route }) {
@@ -135,7 +129,7 @@ export default {
 
     var flipped = false;
     var tabActive = "eye";
-    var parts = app.$parts;
+    var parts = jsonParts;
     return { flipped, tabActive, parts, backleni, leni };
   },
   mounted() {
@@ -151,9 +145,17 @@ export default {
   methods: {
     setPart(parent, item) {
       if (this.flipped) {
-        if (this.backleni[parent] === item) { this.backleni[parent] = ""; } else { this.backleni[parent] = item; }
+        if (this.backleni[parent] === item) {
+          this.backleni[parent] = "";
+        } else {
+          this.backleni[parent] = item;
+        }
       } else {
-        if (this.leni[parent] === item) { this.leni[parent] = ""; } else { this.leni[parent] = item; }
+        if (this.leni[parent] === item) {
+          this.leni[parent] = "";
+        } else {
+          this.leni[parent] = item;
+        }
       }
       this.checkRoute();
     },
@@ -163,7 +165,8 @@ export default {
       return parts[keys[random]];
     },
     chooseOne() {
-      var randomnumber = Math.floor(Math.random() * (Object.keys(this.leni).length - 2 + 1)) + 2;
+      var randomnumber =
+        Math.floor(Math.random() * (Object.keys(this.leni).length - 2 + 1)) + 2;
       const types = Object.keys(this.leni).slice(0, randomnumber);
       const reparts = Object.keys(this.leni);
 
@@ -191,21 +194,44 @@ export default {
       var str = "";
       var repartes = {};
       if (this.flipped) {
-        if (this.backleni.eye !== "") { repartes.e = this.backleni.eye; }
-        if (this.backleni.mouth !== "") { repartes.m = this.backleni.mouth; }
-        if (this.backleni.extra !== "") { repartes.x = this.backleni.extra; }
-        if (this.backleni.hand !== "") { repartes.hd = this.backleni.hand; }
-        if (this.backleni.hat !== "") { repartes.ht = this.backleni.hat; }
-        if (this.backleni.extra2 !== "") { repartes.xx = this.backleni.extra2; }
+        if (this.backleni.eye !== "") {
+          repartes.e = this.backleni.eye;
+        }
+        if (this.backleni.mouth !== "") {
+          repartes.m = this.backleni.mouth;
+        }
+        if (this.backleni.extra !== "") {
+          repartes.x = this.backleni.extra;
+        }
+        if (this.backleni.hand !== "") {
+          repartes.hd = this.backleni.hand;
+        }
+        if (this.backleni.hat !== "") {
+          repartes.ht = this.backleni.hat;
+        }
+        if (this.backleni.extra2 !== "") {
+          repartes.xx = this.backleni.extra2;
+        }
       } else {
-        if (this.leni.eye !== "") { repartes.e = this.leni.eye; }
-        if (this.leni.mouth !== "") { repartes.m = this.leni.mouth; }
-        if (this.leni.extra !== "") { repartes.x = this.leni.extra; }
-        if (this.leni.hand !== "") { repartes.hd = this.leni.hand; }
-        if (this.leni.hat !== "") { repartes.ht = this.leni.hat; }
-        if (this.leni.extra2 !== "") { repartes.xx = this.leni.extra2; }
+        if (this.leni.eye !== "") {
+          repartes.e = this.leni.eye;
+        }
+        if (this.leni.mouth !== "") {
+          repartes.m = this.leni.mouth;
+        }
+        if (this.leni.extra !== "") {
+          repartes.x = this.leni.extra;
+        }
+        if (this.leni.hand !== "") {
+          repartes.hd = this.leni.hand;
+        }
+        if (this.leni.hat !== "") {
+          repartes.ht = this.leni.hat;
+        }
+        if (this.leni.extra2 !== "") {
+          repartes.xx = this.leni.extra2;
+        }
       }
-
 
       for (var key in repartes) {
         if (str != "") {
@@ -219,17 +245,19 @@ export default {
       const DOMURL = self.URL || self.webkitURL || self;
       var svgString;
       if (this.flipped) {
-       svgString = new XMLSerializer().serializeToString(this.$refs.backleni)
-
+        svgString = new XMLSerializer().serializeToString(this.$refs.backleni);
       } else {
-         svgString = new XMLSerializer().serializeToString(this.$refs.frontleni)
+        svgString = new XMLSerializer().serializeToString(this.$refs.frontleni);
       }
-        
-        svgString.replace('viewBox="0 0 200 200"','viewBox="0 0 200 200" width="1000px" height="1000px"');
+
+      svgString.replace(
+        'viewBox="0 0 200 200"',
+        'viewBox="0 0 200 200" width="1000px" height="1000px"'
+      );
       const svg = new Blob([svgString], {
         type: "image/svg+xml;charset=utf-8",
       });
-      return DOMURL.createObjectURL(svg); 
+      return DOMURL.createObjectURL(svg);
     },
     exportLeniSVG() {
       const link = document.createElement("a");
@@ -321,8 +349,8 @@ body {
   color: var(--textColor);
   margin: 0 auto;
   background-color: var(--bgColor);
-background-image: linear-gradient(transparent 90%, rgba(26, 84, 105, 0.25));
-    background-size: 1px 11px;    
+  background-image: linear-gradient(transparent 90%, rgba(26, 84, 105, 0.25));
+  background-size: 1px 11px;
 }
 h1 {
   margin: 0.5rem auto;
@@ -351,7 +379,6 @@ button {
     grid-template-columns: 100vw;
     grid-auto-rows: 460px 1fr 100px;
   }
-
 }
 
 .main-nav {
@@ -359,11 +386,11 @@ button {
   display: flex;
   margin: 0;
   flex-direction: column;
-background-image: linear-gradient(transparent 90%, rgba(26, 84, 105, 0.25));
-    background-size: 1px 11px;  
-         @media (max-width: 960px) {
+  background-image: linear-gradient(transparent 90%, rgba(26, 84, 105, 0.25));
+  background-size: 1px 11px;
+  @media (max-width: 960px) {
     flex-direction: row;
-  }    
+  }
   button {
     background: transparent;
     border: 0;
@@ -415,7 +442,7 @@ background-image: linear-gradient(transparent 90%, rgba(26, 84, 105, 0.25));
   padding: 0 15px;
   @media (max-width: 960px) {
     flex-wrap: wrap;
-  }  
+  }
   > button {
     padding: 10px 20px;
     margin: 0 5px;
@@ -427,10 +454,10 @@ background-image: linear-gradient(transparent 90%, rgba(26, 84, 105, 0.25));
     text-align: center;
     opacity: 0.75;
 
-  @media (max-width: 960px) {
-    flex-wrap: wrap;
-    margin-bottom: 10px;
-  }      
+    @media (max-width: 960px) {
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
     &:hover {
       opacity: 1;
     }
@@ -449,7 +476,7 @@ background-image: linear-gradient(transparent 90%, rgba(26, 84, 105, 0.25));
   padding: 20px 0;
   &.active {
     display: block;
-      background-color: var(--bgColor);
+    background-color: var(--bgColor);
   }
   button {
     width: 100px;
@@ -474,193 +501,9 @@ background-image: linear-gradient(transparent 90%, rgba(26, 84, 105, 0.25));
 
 .partes {
   background-image: linear-gradient(transparent 90%, rgba(26, 84, 105, 0.25));
-    background-size: 1px 11px;
-      @media (max-width: 960px) {
-    overflow: auto;
-  }    
-}
-
-.scene {
-  width: 100%;
-  height: var(--height);
-  perspective: 150px;
-  perspective-origin: center 320px;
-  transition: all 0.4s linear;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  &.shopActive {
-    perspective: 250px;
-    perspective-origin: center 220px;
-    //animation: 10s recaca linear infinite;
-  }
-  &.buildActive {
-    perspective: 300px;
-  }
-  &.growActive {
-    perspective: 350px;
-    perspective-origin: center 400px;
-  }
-  &.loginIn {
-    perspective: 400px;
-  }
-}
-
-.box {
-  width: 100%;
-  height: var(--height);
-  position: relative;
-  transform-style: preserve-3d;
-  transform: translateZ(calc(-1 * var(--depthTransform)));
-}
-
-.box__face {
-  position: absolute;
-  border: 1px solid rgba(26, 84, 105, 0.5);
-  border-radius: 0px;
-  transition: all 0.2s linear;
-}
-
-.box__face--back {
-  width: 100%;
-  height: var(--height);
-  background-image: linear-gradient(rgba(0, 77, 71, 0.3) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 77, 71, 0.3) 1px, transparent 1px);
-  background-size: 1px 11px, 11px 11px;
-  background-position: -1px -1px, -1px -1px;
-  border: 0;
-  &:after {
-    content: "";
-    background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    z-index: 999;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    display: block;
-  }
-}
-
-.box__face--right,
-.box__face--left {
-  width: var(--depth);
-  height: var(--height);
-  left: var(--widthreTransform);
-  background-image: linear-gradient(transparent 90%, rgba(26, 84, 105, 0.5));
   background-size: 1px 11px;
-  position: absolute;
-  &:after {
-    content: "";
-    background: linear-gradient(to right, black, transparent);
-    position: absolute;
-    z-index: 999;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    display: block;
+  @media (max-width: 960px) {
+    overflow: auto;
   }
-}
-.box__face--left {
-  border-left-width: 1px;
-  border-top-width: 1px;
-  border-right: 0;
-  border-bottom-width: 1px;
-  left: 0;
-}
-
-.box__face--right {
-  border-right-width: 1px;
-  border-top-width: 1px;
-  border-bottom-width: 1px;
-  left: initial;
-  right: 0;
-}
-
-.box__face--right {
-  border-left: 0;
-  &:after {
-    content: "";
-    background: linear-gradient(to left, black, transparent);
-    position: absolute;
-    z-index: 999;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    display: block;
-  }
-}
-
-.box__face--top {
-  position: absolute;
-  background-image: linear-gradient(
-    to right,
-    transparent 90%,
-    rgba(26, 84, 105, 0.5)
-  );
-  background-size: 11px 1px;
-  border-bottom: 0;
-  top: 0;
-  &:after {
-    content: "";
-    background: linear-gradient(to bottom, black 10%, transparent);
-    position: absolute;
-    z-index: 9;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    display: block;
-  }
-}
-
-.box__face--bottom {
-  position: absolute;
-  background-image: linear-gradient(
-    to right,
-    transparent 90%,
-    rgba(26, 84, 105, 0.5)
-  );
-  background-size: 11px 1px;
-  border-top: 0;
-  border-bottom-width: 1px;
-  bottom: 0;
-  &:after {
-    content: "";
-    background: linear-gradient(to top, black, transparent);
-    position: absolute;
-    z-index: 999;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    display: block;
-  }
-}
-
-.box__face--top,
-.box__face--bottom {
-  width: 100%;
-  height: var(--depth);
-  border-top-width: 1px;
-}
-
-.box__face--back {
-  transform: rotateY(180deg) translateZ(var(--depthTransform));
-}
-.box__face--right {
-  transform: rotateY(90deg) translateZ(var(--depthTransform));
-}
-.box__face--left {
-  transform: rotateY(-90deg) translateZ(var(--depthTransform));
-}
-.box__face--top {
-  transform: rotateX(90deg) translateZ(var(--depthTransform));
-}
-.box__face--bottom {
-  transform: rotateX(-90deg) translateZ(var(--depthTransform));
 }
 </style>

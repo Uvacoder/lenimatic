@@ -6,6 +6,7 @@ You can directly use them in pages and other components without the need to impo
 
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
+- `<Scene>` | `<scene>` (components/global/scene.vue)
 - `<ExtraBeard>` | `<extra-beard>` (components/extra/beard.vue)
 - `<ExtraBlush>` | `<extra-blush>` (components/extra/blush.vue)
 - `<ExtraBowie>` | `<extra-bowie>` (components/extra/bowie.vue)
